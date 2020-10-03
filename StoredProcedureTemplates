@@ -1,0 +1,45 @@
+
+//##################################################
+INSERT INTO STORED PROCEDURE TEMPLATE
+//##################################################
+
+/*
+----------------------------------------------------------------------------
+-- Object Name: dbo.spInsertTableName
+-- Project: SqlTerritories
+-- Business Process: Sample code
+-- Purpose: Insert a record into a table
+-- Detailed Description: Insert a record into the dbo.TableName table
+-- Database: SqlTerritoriesDB
+-- Dependent Objects: None
+-- Called By: Application
+-- Upstream Systems: N\A
+-- Downstream Systems: N\A
+-- 
+--------------------------------------------------------------------------------------
+-- Rev | CMR | Date Modified | Developer  | Change Summary
+--------------------------------------------------------------------------------------
+-- 001 | N\A | 06.28.2020 | BWiggins | Original code
+--
+*/
+
+CREATE PROCEDURE [dbo].[spInsertTableName]
+
+	@param1 NVARCHAR(30),
+    @param2 INT
+
+AS
+BEGIN 
+
+ SET NOCOUNT ON; 
+
+  BEGIN 
+    INSERT INTO [dbo].[tblTableName]
+        ([param1], 
+		[param2])
+	VALUES
+    (@param1,
+	@param)
+    END 
+END
+GO
