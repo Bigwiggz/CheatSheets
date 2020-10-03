@@ -1,0 +1,80 @@
+
+//#######################################
+MULTISELECT LIST ASP.NET CORE MVC
+//#######################################
+
+
+//#######################################
+VIEWMODEL
+//#######################################
+public class Item
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+}
+
+public class MyModel
+{
+    public IEnumerable<int> SelectedItemIds { get; set; }
+    public IEnumerable<Item> AvailableItems { 
+        get 
+        {
+            return new[] 
+            {
+                new Item { Id = 1, Name = "Item 1" },
+                new Item { Id = 2, Name = "Item 2" },
+                new Item { Id = 3, Name = "Item 3" },
+            };
+        } 
+    }
+}
+
+//#######################################
+CONTROLLER
+//#######################################
+[HandleError]
+public class HomeController : Controller
+{
+    public ActionResult Index()
+    {
+        var model = new MyModel
+        {
+            SelectedItemIds = new[] { 2, 3 }
+        };
+        return View(model);
+    }
+
+    [HttpPost]
+    public ActionResult Index(IEnumerable<int> selectedItemIds)
+    {
+        var model = new MyModel
+        {
+            // Important: Don't ever try to modify the selectedItemIds here
+            // The Html helper will completely ignore it and use 
+            // the POSTed values
+            SelectedItemIds = selectedItemIds
+        };
+        return View(model);
+    }
+}
+
+//#######################################
+VIEW
+//#######################################
+<% using (Html.BeginForm()) { %>
+    <%= Html.ListBoxFor(x => x.SelectedItemIds, 
+        new MultiSelectList(Model.AvailableItems, "Id", "Name")) %>
+    <input type="submit" value="GO" />
+<% } %>
+
+
+//#######################################
+NOTES
+//#######################################
+Notice that the Html.ListBoxFor is more adapted if you want to generate a multiple select. Obviously the AvailableItems property should be fetched from a repository.
+
+
+//#######################################
+Other Website Implementations
+//#######################################
+https://www.mikesdotnetting.com/article/265/asp-net-mvc-dropdownlists-multiple-selection-and-enum-support

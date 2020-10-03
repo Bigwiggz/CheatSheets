@@ -1,0 +1,195 @@
+//##################################################
+FULL CRUD STORED PROCEDURE TEMPLATE
+//##################################################
+/*
+----------------------------------------------------------------------------
+-- Object Name: dbo.spCRUDTableName
+-- Project: SqlTerritories
+-- Business Process: Sample code
+-- Purpose: CRUD Operations on a record into a table
+-- Detailed Description: Insert a record into the dbo.TableName table
+-- Database: SqlTerritoriesDB
+-- Dependent Objects: None
+-- Called By: Application
+-- Upstream Systems: N\A
+-- Downstream Systems: N\A
+-- 
+--------------------------------------------------------------------------------------
+-- Rev | CMR | Date Modified | Developer  | Change Summary
+--------------------------------------------------------------------------------------
+-- 001 | N\A | 06.28.2020 | BWiggins | Original code
+--
+*/
+
+CREATE PROCEDURE [dbo].[TableName]
+      @Action VARCHAR(10),
+      @CustomerId INT = NULL,
+      @Name VARCHAR(100) = NULL,
+      @Country VARCHAR(100) = NULL
+AS
+BEGIN
+      SET NOCOUNT ON;
+ 
+      --SELECT
+      IF @Action = 'SELECT'
+      BEGIN
+            SELECT CustomerId, Name, Country
+            FROM TableName
+      END
+ 
+      --INSERT
+      IF @Action = 'INSERT'
+      BEGIN
+            INSERT INTO TableName(Name, Country)
+            VALUES (@Name, @Country)
+      END
+ 
+      --UPDATE
+      IF @Action = 'UPDATE'
+      BEGIN
+            UPDATE TableName
+            SET Name = @Name, Country = @Country
+            WHERE CustomerId = @CustomerId
+      END
+ 
+      --DELETE
+      IF @Action = 'DELETE'
+      BEGIN
+            DELETE FROM TableName
+            WHERE CustomerId = @CustomerId
+      END
+END
+
+
+
+
+
+
+//##################################################
+INSERT INTO STORED PROCEDURE TEMPLATE
+//##################################################
+
+/*
+----------------------------------------------------------------------------
+-- Object Name: dbo.spInsertTableName
+-- Project: SqlTerritories
+-- Business Process: Sample code
+-- Purpose: Insert a record into a table
+-- Detailed Description: Insert a record into the dbo.TableName table
+-- Database: SqlTerritoriesDB
+-- Dependent Objects: None
+-- Called By: Application
+-- Upstream Systems: N\A
+-- Downstream Systems: N\A
+-- 
+--------------------------------------------------------------------------------------
+-- Rev | CMR | Date Modified | Developer  | Change Summary
+--------------------------------------------------------------------------------------
+-- 001 | N\A | 06.28.2020 | BWiggins | Original code
+--
+*/
+
+CREATE PROCEDURE [dbo].[spInsertTableName]
+
+	@param1 NVARCHAR(30),
+    @param2 INT
+
+AS
+BEGIN 
+
+ SET NOCOUNT ON; 
+
+  BEGIN 
+    INSERT INTO [dbo].[tblTableName]
+        ([param1], 
+		[param2])
+	VALUES
+    (@param1,
+	@param)
+    END 
+END
+GO
+
+//##################################################
+UPDATE STORED PROCEDURE WITH OPTIONAL PARAMETERS TEMPLATE
+//##################################################
+
+/*
+----------------------------------------------------------------------------
+-- Object Name: dbo.spUpdateTableName
+-- Project: SqlTerritories
+-- Business Process: Sample code
+-- Purpose: Update a record into a table
+-- Detailed Description: Update a record into the dbo.TableName table
+-- Database: SqlTerritoriesDB
+-- Dependent Objects: None
+-- Called By: Application
+-- Upstream Systems: N\A
+-- Downstream Systems: N\A
+-- 
+--------------------------------------------------------------------------------------
+-- Rev | CMR | Date Modified | Developer  | Change Summary
+--------------------------------------------------------------------------------------
+-- 001 | N\A | 06.28.2020 | BWiggins | Original code
+--
+*/
+
+CREATE PROCEDURE [dbo].[spUpdateTableName]
+
+	@id INT,
+	@param1 NVARCHAR(30),
+    @param2 INT
+
+AS
+BEGIN 
+
+ SET NOCOUNT ON; 
+
+  BEGIN 
+    UPDATE [dbo].[tblTableName]
+    SET param1=ISNULL(@param1,param1), 
+		param2=ISNULL(@param2,param2)
+	WHERE id=@id
+    END 
+END
+GO
+
+//##################################################
+SELECT STORED PROCEDURE WITH OPTIONAL PARAMETERS TEMPLATE
+//##################################################
+
+/*
+----------------------------------------------------------------------------
+-- Object Name: dbo.spUpdateTableName
+-- Project: SqlTerritories
+-- Business Process: Sample code
+-- Purpose: Parameterized Search of a record(s) into a table
+-- Detailed Description: Update a record into the dbo.UpdateTableName table
+-- Database: SqlTerritoriesDB
+-- Dependent Objects: None
+-- Called By: Application
+-- Upstream Systems: N\A
+-- Downstream Systems: N\A
+-- 
+--------------------------------------------------------------------------------------
+-- Rev | CMR | Date Modified | Developer  | Change Summary
+--------------------------------------------------------------------------------------
+-- 001 | N\A | 06.28.2020 | BWiggins | Original code
+--
+*/
+
+
+CREATE PROCEDURE spUpdateTableName
+    @FirstName varchar(25) = null,
+    @LastName varchar(25) = null,
+    @Title varchar(25) = null
+AS
+    BEGIN
+        SELECT ID, FirstName, LastName, Title
+        FROM tblUpdateTableName
+        WHERE
+                (@FirstName IS NULL OR (FirstName = @FirstName))
+            AND (@LastName  IS NULL OR (LastName  = @LastName ))
+            AND (@Title     IS NULL OR (Title     = @Title    ))
+        OPTION (RECOMPILE) ---<<<<use if on for SQL 2008 SP1 CU5 (10.0.2746) and later
+    END

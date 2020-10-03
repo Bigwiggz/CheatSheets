@@ -1,0 +1,80 @@
+//##################################################
+//HOW TO INSTALL AND USE AUTOMAPPER
+//##################################################
+
+
+//##################################################
+//Step 1. Install AutoMapper extension from Package Manager in your project
+//##################################################
+Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection -Version 7.0.0
+
+or 
+
+Nuget Package Manager
+//##################################################
+//Step 2. Register a service in CinfigureServices on Startup.cs
+//##################################################
+// Startup.cs
+using AutoMapper;
+public void ConfigureServices(IServiceCollection services){
+    services.AddAutoMapper(typeof(Startup));
+}
+//##################################################
+//Step 3.  Create a model and a data transfer object
+//##################################################
+/ User.cs
+// The model you want to map from
+public class User{
+    public string Name {get;set;}
+    public string Email {get;set;}
+    public string Phone {get;set;}
+// Constructor to initialize User
+    public User(){
+        Name = "Nicky";
+        Email = "myemail@gmail.com";
+        Phone = "+81234588";
+    }
+}
+// UserDTO.cs
+// The data transfer object you want to map to
+public class UserDTO{
+    public string Name{get;set;}
+    public string Email{get;set;}
+    public string Phone{get;set;}
+}
+
+//##################################################
+//Step 4.  Create an AutoMapping class file to register a mapping relation
+//##################################################
+
+// AutoMapping.cs
+using AutoMapper;
+public class AutoMapping : Profile
+{
+    public AutoMapping()
+    {
+        CreateMap<User, UserDTO>(); // means you want to map from User to UserDTO
+    }
+}
+
+//##################################################
+//Step 5. Map User to UserDTO in code
+//##################################################
+
+// HomeController.cs
+using AutoMapper;
+public class HomeController : Controller
+{
+    private readonly IMapper _mapper;
+    public HomeController(IMapper mapper)
+    {
+        _mapper = mapper;
+    }
+    public IActionResult GetUser()
+    {
+        User user = new User();
+        var userDTO = _mapper.Map<UserDTO>(user);
+        return View(userDTO);
+    }
+}
+

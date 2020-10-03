@@ -1,0 +1,4 @@
+#Examples of .net core 2.0 authentication
+
+https://github.com/ChrisKlug/asp.net-core-2.0-auth-demo
+
