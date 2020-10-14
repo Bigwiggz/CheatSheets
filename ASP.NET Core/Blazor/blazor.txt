@@ -1,0 +1,19 @@
+BLAZOR WEBSITES
+
+1) FREE TOOLS
+
+blazor.syncfusion.com is probably the best
+
+Blazor Server In Depth Course: https://www.iamtimcorey.com/p/blazor-...
+Material Design Components: https://www.matblazor.com/
+ChartJS for Blazor: https://www.iheartblazor.com/welcome
+DevExpress: https://www.devexpress.com/blazor/
+Radzen Blazor Components: https://blazor.radzen.com/
+Syncfusion Blazor Components: https://blazor.syncfusion.com/
+Syncfusion Free License: https://www.syncfusion.com/products/c...
+
+
+2) BLAZOR EXTENTIONS
+
+Blazor Context Menus: https://blazor-context-menu-demo.azur...
+Blazor Extensions: https://www.nuget.org/profiles/Blazor...
