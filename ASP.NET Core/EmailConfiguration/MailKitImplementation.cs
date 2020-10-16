@@ -22,6 +22,7 @@ Services
 		(Add Email Methods here like EmailService Extensions)
 
 4) Use the Send and ReceiveEmail methods to implement your own email services.
+5) Once added, implement your Email Services, the example shown is EmailExtensions
 */
 
 
@@ -104,7 +105,8 @@ public class EmailConfiguration : IEmailConfiguration
 services.AddMvc();
 services.AddSingleton<IEmailConfiguration>(Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>());
 services.AddTransient<IEmailService, EmailService>();
-
+//This is the name of your final Email methods.
+services.AddTransient<IEmailExtensions, EmailExtensions>();
 
 
 //Add a public interface IEmailService
