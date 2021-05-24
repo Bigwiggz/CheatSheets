@@ -1,4 +1,4 @@
-**List of Websites**
+LIST OF WEBSITES
 
 ASP.Net Core MVC Web ViewComponents
 1) Use this to add components to views
