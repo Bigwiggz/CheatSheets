@@ -6,3 +6,5 @@ https://www.telerik.com/blogs/why-you-should-use-view-components-not-partial-vie
 
 2) AdminLTE How To Dasboard for Asp.Net Core MVC\
 https://dotnettec.com/how-to-integrate-adminlte-with-asp-net-core-3-1/
+
+https://www.puresourcecode.com/dotnet/net-core/integrating-adminlte-with-asp-net-core/
