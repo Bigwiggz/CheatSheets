@@ -10,3 +10,7 @@ https://codewithmukesh.com/blog/integrating-adminlte-with-aspnet-core/
 https://dotnettec.com/how-to-integrate-adminlte-with-asp-net-core-3-1/
 \
 https://www.puresourcecode.com/dotnet/net-core/integrating-adminlte-with-asp-net-core/
+\
+2a) Bug Tracker Example
+\
+https://www.youtube.com/watch?v=vG824vBdYY8
