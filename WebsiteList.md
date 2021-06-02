@@ -14,3 +14,6 @@ https://www.puresourcecode.com/dotnet/net-core/integrating-adminlte-with-asp-net
 2a) Bug Tracker Example
 \
 https://www.youtube.com/watch?v=vG824vBdYY8
+
+3) How to create Readme.md files with an online editor\
+https://readme.so/editor
