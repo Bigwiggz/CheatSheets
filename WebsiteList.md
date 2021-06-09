@@ -17,3 +17,9 @@ https://www.youtube.com/watch?v=vG824vBdYY8
 
 3) How to create Readme.md files with an online editor\
 https://readme.so/editor
+
+4) How to implement Asp.Net Core Identity\
+https://www.youtube.com/watch?v=UpPPOVSu5-s
+\
+Using Google Authentication with Microsoft Identity\
+https://www.youtube.com/watch?v=GF0Mn-g7Nf0
