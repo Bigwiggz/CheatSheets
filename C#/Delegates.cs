@@ -162,7 +162,7 @@ namespace Delegates
             add.Invoke(); 
             
             //Remove event
-            add-= new DelEventHandler();
+            add-= DelEventHandler(USA);
    
             Console.ReadLine();  
         }  
