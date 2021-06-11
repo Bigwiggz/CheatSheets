@@ -159,7 +159,10 @@ namespace Delegates
             add += new DelEventHandler(USA);  
             add += new DelEventHandler(India);  
             add += new DelEventHandler(England);  
-            add.Invoke();  
+            add.Invoke(); 
+            
+            //Remove event
+            add-= new DelEventHandler();
    
             Console.ReadLine();  
         }  
@@ -179,4 +182,5 @@ namespace Delegates
         }  
     }  
 }  
+
 
