@@ -23,3 +23,6 @@ https://www.youtube.com/watch?v=UpPPOVSu5-s
 \
 Using Google Authentication with Microsoft Identity\
 https://www.youtube.com/watch?v=GF0Mn-g7Nf0
+
+5) Bootstrap Class Intro\
+https://coursetro.com/posts/code/130/Learn-Bootstrap-4-Final-in-2018-with-our-Free-Crash-Course
