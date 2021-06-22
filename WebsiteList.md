@@ -30,3 +30,6 @@ https://www.youtube.com/watch?v=3PyUjOmuFic
 
 5) Bootstrap Class Intro\
 https://coursetro.com/posts/code/130/Learn-Bootstrap-4-Final-in-2018-with-our-Free-Crash-Course
+
+6) Bootstrap snippets\
+https://bbbootstrap.com/
