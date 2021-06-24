@@ -36,3 +36,6 @@ https://bbbootstrap.com/
 
 7) Google Maps API use Instructions and examples\
 https://developers.google.com/maps/documentation/javascript/overview
+
+\
+https://developers.google.com/maps/documentation/javascript/importing_data#maps_earthquake_markers-javascript
