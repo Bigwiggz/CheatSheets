@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./googleStyle.css" />
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=ADD API KEY HERE &libraries=places"></script>
+	<script src="./googleMapsAutocompleteLatLong.js"></script>
+  </head>
+	<body>
+		<input id="searchTextField" type="text" size="50" placeholder="Enter a location" autocomplete="on" runat="server" />  
+		<input type="text" id="city2" name="city2" />
+		<input type="text" id="cityLat" name="cityLat" />
+		<input type="text" id="cityLng" name="cityLng" />
+	</body>
+</html>
