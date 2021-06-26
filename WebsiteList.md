@@ -38,4 +38,4 @@ https://bbbootstrap.com/
 https://developers.google.com/maps/documentation/javascript/overview
 
 \
-https://developers.google.com/maps/documentation/javascript/importing_data#maps_earthquake_markers-javascript
+https://stackoverflow.com/questions/10918080/are-google-map-polygons-indexed-how-do-i-refer-to-their-index
