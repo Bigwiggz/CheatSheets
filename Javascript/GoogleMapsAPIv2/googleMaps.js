@@ -1,6 +1,10 @@
+/*
+GOOGLE MAPS
+*/
+
 // This example requires the Drawing library. Include the libraries=drawing
 // parameter when you first load the API. For example:
-// <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&libraries=drawing">
+// <script src="https://maps.googleapis.com/maps/api/js?key=YOURAPIKEYHERE&libraries=drawing">
 
 function initMap() {
 	
@@ -50,7 +54,7 @@ function initMap() {
   let dataLayer=new google.maps.Data();
   
 ////////////////////////////////////
-//Add event Listener to capture complete shapes and points to save to database
+//Add event Listener to capture complete shapes that are drawn and points to save to database
 ////////////////////////////////////
 
   // from http://stackoverflow.com/questions/25072069/export-geojson-data-from-google-maps
@@ -92,7 +96,7 @@ function initMap() {
 	});
 	
 ////////////////////////////////////
-//Load geoJsonData
+//Load Data
 ////////////////////////////////////
 
 
@@ -101,6 +105,10 @@ function initMap() {
   // This example uses a local copy of the GeoJSON stored at same folder for example "TerritoryHelper.js"
   script.src = "TerritoryHelper.js";
   document.getElementsByTagName("head")[0].appendChild(script);
+	
+ 	////////////////////////////////////
+	//Load Territories (Polygons)
+	////////////////////////////////////
 
 	google.maps.event.addDomListener(document.getElementById('loadData'),'click',function(){
 		
@@ -108,6 +116,7 @@ function initMap() {
 		//map.data.loadGeoJson('TerritoryHelper.json');
 		
 		//Load for testing only
+		let previouslySelectedPolygon;
 		LoadGeoJsonFile(jsGeoJson);
 		
 		function LoadGeoJsonFile(results){
@@ -121,14 +130,16 @@ function initMap() {
 					//For label Position
 					bounds.extend({lat:territoryShapeCoords[j][1],lng:territoryShapeCoords[j][0]});
 				}
+
 				//Add Polygon
 				let territoriesLoaded=new google.maps.Polygon({
 					paths: pathCoords,
-					strokeColor: results.features[i].properties.TerritoryTypeColor,
+					strokeColor: "#"+results.features[i].properties.TerritoryTypeColor,
 					strokeOpacity: 0.8,
 					strokeWeight: 2,
-					fillColor: String(results.features[i].properties.TerritoryTypeColor),
+					fillColor: "#"+results.features[i].properties.TerritoryTypeColor,
 					fillOpacity: 0.2,
+					indexID:results.features[i].properties.name
 				});
 				
 				//Add Label to polygon
@@ -140,13 +151,69 @@ function initMap() {
 					map:map
 				});
 				
-				console.log(results.features[i].properties.TerritoryTypeColor);
-				console.log("2");
+				////////////////////////////////////
+				//Select call on territory on 'mouseclick'
+				////////////////////////////////////
+				google.maps.event.addListener(territoriesLoaded, 'click', function (event) {
+					if(previouslySelectedPolygon){
+						previouslySelectedPolygon.setOptions({fillOpacity:0.2});
+					}
+					this.setOptions({fillOpacity:0.5});
+									
+					////////////////////////////////////
+					//Get IndexID
+					////////////////////////////////////
+					console.log(this.indexID);
+					previouslySelectedPolygon=territoriesLoaded;
+				});
 				
 				mapLabel.setMap(map);
 				territoriesLoaded.setMap(map);
 			}
 
+		}
+	})
+
+	////////////////////////////////////
+	//Load Addresses as markers
+	////////////////////////////////////
+
+	// Create a <script> tag and set the USGS URL as the source.
+	const AddressScript = document.createElement("script");
+	// This example uses a local copy of the GeoJSON stored at same folder for example "addresses.js"
+	AddressScript.src = "addresses.js";
+	document.getElementsByTagName("head")[0].appendChild(AddressScript);
+
+	google.maps.event.addDomListener(document.getElementById('loadAddresses'),'click',function(){
+
+
+		LoadAddresses(addressesJson);
+
+		function LoadAddresses(results){
+			for(let i=0; i<results.Locations.length; i++){
+				//Add Map Marker
+				let mapAddressMarker=new google.maps.Marker({
+					icon:`./img/${results.Locations[i].LocationType}.png`,
+					position:{lat:parseFloat(results.Locations[i].Latitude),lng:parseFloat(results.Locations[i].Longitude)},
+					label: results.Locations[i].AddressNumber,
+					title: results.Locations[i].FullAddress,
+					indexID: results.Locations[i].No
+				});
+
+				////////////////////////////////////
+				//Select call on address on 'mouseclick'
+				////////////////////////////////////
+				google.maps.event.addListener(mapAddressMarker,'click',function(event){
+					////////////////////////////////////
+					//Get IndexID
+					////////////////////////////////////
+					console.log(this.indexID);
+				})
+
+
+				mapAddressMarker.setMap(map);
+
+			}
 		}
 	})
 	
@@ -167,7 +234,10 @@ function initMap() {
 		console.log("got here");
 		dataLayer.pop();
 	})
+
+
 }
+
 
 
 
