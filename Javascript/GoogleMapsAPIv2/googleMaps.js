@@ -197,7 +197,7 @@ function initMap() {
 					position:{lat:parseFloat(results.Locations[i].Latitude),lng:parseFloat(results.Locations[i].Longitude)},
 					label: results.Locations[i].AddressNumber,
 					title: results.Locations[i].FullAddress,
-					indexID: results.Locations[i].No
+					indexID: parseInt(results.Locations[i].No)
 				});
 
 				////////////////////////////////////
