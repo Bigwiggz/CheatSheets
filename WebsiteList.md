@@ -37,5 +37,7 @@ https://bbbootstrap.com/
 7) Google Maps API use Instructions and examples\
 https://developers.google.com/maps/documentation/javascript/overview
 
-\
-https://stackoverflow.com/questions/10918080/are-google-map-polygons-indexed-how-do-i-refer-to-their-index
+HOW TO PASS C# OJBECT TO JAVASCRIPT\
+https://stackoverflow.com/questions/19201970/how-to-pass-model-from-view-to-javascript-in-asp-net-mvc4
+https://stackoverflow.com/questions/26344089/how-to-get-json-object-from-razor-model-object-in-javascript
+https://stackoverflow.com/questions/8145716/asp-net-mvc-passing-a-c-sharp-object-to-javascript
