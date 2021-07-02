@@ -37,6 +37,15 @@ https://bbbootstrap.com/
 7) Google Maps API use Instructions and examples\
 https://developers.google.com/maps/documentation/javascript/overview
 
+8) Advanced features of ASP.NET Core\
+  a) Configuration\
+  b) App Settings\
+  c) View Components\
+  d) Globalization and Localization\
+  e) Application Startup\
+  https://www.youtube.com/watch?v=cXYiGblaS9g&t=808s
+  
+  
 HOW TO PASS C# OJBECT TO JAVASCRIPT\
 https://stackoverflow.com/questions/19201970/how-to-pass-model-from-view-to-javascript-in-asp-net-mvc4
 https://stackoverflow.com/questions/26344089/how-to-get-json-object-from-razor-model-object-in-javascript
