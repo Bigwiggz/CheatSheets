@@ -45,6 +45,10 @@ https://developers.google.com/maps/documentation/javascript/overview
   e) Application Startup\
   https://www.youtube.com/watch?v=cXYiGblaS9g&t=808s
   
+  9) Add Blazor components to your MVC website\
+  https://www.youtube.com/watch?v=Pm4LejeJkoU
+  
+  
   
 HOW TO PASS C# OJBECT TO JAVASCRIPT\
 https://stackoverflow.com/questions/19201970/how-to-pass-model-from-view-to-javascript-in-asp-net-mvc4
