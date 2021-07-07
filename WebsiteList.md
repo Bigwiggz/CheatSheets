@@ -50,7 +50,7 @@ https://developers.google.com/maps/documentation/javascript/overview
   
 10) How to use Net Topology Suite for geo spatial data\
 https://github.com/NetTopologySuite/NetTopologySuite/wiki/GettingStarted\
-Example of how to use transformations with ProjNet to get accurate data
+Example of how to use transformations with ProjNet to get accurate data\
 https://docs.microsoft.com/en-us/ef/core/modeling/spatial
   
 HOW TO PASS C# OJBECT TO JAVASCRIPT\
