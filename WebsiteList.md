@@ -45,9 +45,11 @@ https://developers.google.com/maps/documentation/javascript/overview
   e) Application Startup\
   https://www.youtube.com/watch?v=cXYiGblaS9g&t=808s
   
-  9) Add Blazor components to your MVC website\
+9) Add Blazor components to your MVC website\
   https://www.youtube.com/watch?v=Pm4LejeJkoU
   
+10) How to use Net Topology Suite for geo spatial data\
+https://github.com/NetTopologySuite/NetTopologySuite/wiki/GettingStarted
   
   
 HOW TO PASS C# OJBECT TO JAVASCRIPT\
