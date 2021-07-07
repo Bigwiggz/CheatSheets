@@ -49,8 +49,9 @@ https://developers.google.com/maps/documentation/javascript/overview
   https://www.youtube.com/watch?v=Pm4LejeJkoU
   
 10) How to use Net Topology Suite for geo spatial data\
-https://github.com/NetTopologySuite/NetTopologySuite/wiki/GettingStarted
-  
+https://github.com/NetTopologySuite/NetTopologySuite/wiki/GettingStarted\
+Example of how to use transformations with ProjNet to get accurate data
+https://docs.microsoft.com/en-us/ef/core/modeling/spatial
   
 HOW TO PASS C# OJBECT TO JAVASCRIPT\
 https://stackoverflow.com/questions/19201970/how-to-pass-model-from-view-to-javascript-in-asp-net-mvc4
