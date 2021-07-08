@@ -52,6 +52,9 @@ https://developers.google.com/maps/documentation/javascript/overview
 https://github.com/NetTopologySuite/NetTopologySuite/wiki/GettingStarted\
 Example of how to use transformations with ProjNet to get accurate data\
 https://docs.microsoft.com/en-us/ef/core/modeling/spatial
+
+10) Good Blazor example of an expense tracker\
+https://github.com/syncfusion/blazor-showcase-expense-tracker
   
 HOW TO PASS C# OJBECT TO JAVASCRIPT\
 https://stackoverflow.com/questions/19201970/how-to-pass-model-from-view-to-javascript-in-asp-net-mvc4
