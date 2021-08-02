@@ -60,3 +60,6 @@ HOW TO PASS C# OJBECT TO JAVASCRIPT\
 https://stackoverflow.com/questions/19201970/how-to-pass-model-from-view-to-javascript-in-asp-net-mvc4
 https://stackoverflow.com/questions/26344089/how-to-get-json-object-from-razor-model-object-in-javascript
 https://stackoverflow.com/questions/8145716/asp-net-mvc-passing-a-c-sharp-object-to-javascript
+
+11) Database Connection String Format Website\
+https://web.archive.org/web/20210720141626/https://www.connectionstrings.com/
