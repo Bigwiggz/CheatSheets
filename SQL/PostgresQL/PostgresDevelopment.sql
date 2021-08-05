@@ -9,7 +9,22 @@
 CREATE EXTENSION postgis
 
 -------------------------
---1 Using Dapper with POSTGRESQL
+--2 Use Address Standardizer
+-------------------------
+CREATE EXTENSION address_standardizer
+
+-------------------------
+--3 Use use TigerGeocoder
+-------------------------
+CREATE EXTENSION postgis;
+CREATE EXTENSION fuzzystrmatch;
+CREATE EXTENSION postgis_tiger_geocoder;
+--this one is optional if you want to use the rules based standardizer ( ←-
+pagc_normalize_address)
+CREATE EXTENSION address_standardizer
+
+-------------------------
+--4 Using Dapper with POSTGRESQL
 -------------------------
 --1) Load basic Dapper in your data access library
 --2) Use the following format for the Database connection string 
@@ -19,11 +34,22 @@ CREATE EXTENSION postgis
 --5) Consider this example as a PostgresQL Insert using Dapper
 --https://stackoverflow.com/questions/65186048/using-dapper-c-to-call-postgresql-stored-procedure
 /*
+-------------------------
+--5a Npgsql USE
+-------------------------
+--WEBSITE https://www.npgsql.org/doc/basic-usage.html#stored-functions-and-procedures
 Note that if CommandType.StoredProcedure is set and your parameter instances have names, 
 Npgsql will generate parameters with named notation: SELECT my_func(p1 => 'some_value'). 
 This means that your NpgsqlParameter names must match your PostgreSQL function parameters, 
 or the function call will fail. If you omit the names on your NpgsqlParameters, 
 positional notation will be used instead.
+
+using (var cmd = new NpgsqlCommand("my_func", conn))
+{
+    cmd.CommandType = CommandType.StoredProcedure;
+    cmd.Parameters.AddWithValue("p1", "some_value");
+    using (var reader = cmd.ExecuteReader()) { ... }
+}
 */
 
 		/*
