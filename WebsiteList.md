@@ -63,3 +63,6 @@ https://stackoverflow.com/questions/8145716/asp-net-mvc-passing-a-c-sharp-object
 
 11) Database Connection String Format Website\
 https://web.archive.org/web/20210720141626/https://www.connectionstrings.com/
+
+12) Using PostgresQL\
+https://stackoverflow.com/questions/65186048/using-dapper-c-to-call-postgresql-stored-procedure
