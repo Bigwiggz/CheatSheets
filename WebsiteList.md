@@ -66,3 +66,6 @@ https://web.archive.org/web/20210720141626/https://www.connectionstrings.com/
 
 12) Using PostgresQL\
 https://stackoverflow.com/questions/65186048/using-dapper-c-to-call-postgresql-stored-procedure
+
+13) GOOD EXAMPLE OF MULTI ARCHITECTURED SYSTEM\
+https://github.com/EdwinVW/pitstop
