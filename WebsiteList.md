@@ -69,3 +69,7 @@ https://stackoverflow.com/questions/65186048/using-dapper-c-to-call-postgresql-s
 
 13) GOOD EXAMPLE OF MULTI ARCHITECTURED SYSTEM\
 https://github.com/EdwinVW/pitstop
+
+14) Email in ASP.NET Core Setup\
+https://github.com/markscodingspot/BeautifulMailer
+
