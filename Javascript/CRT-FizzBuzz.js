@@ -12,6 +12,12 @@ let startValue=1;
 let endValue=100;
 
 //Print out all numbers
+let insertedRowText="";
+
+for(let i=startValue; i<endValue;i++){
+	let fizzBuzzValue=DefineFizzBuzz(i);
+	insertedRowText+=`<tr><td>${i}-${fizzBuzzValue}</td></tr>`;
+}
 
 function DefineFizzBuzz(number){
 	let result="";
@@ -27,7 +33,7 @@ function DefineFizzBuzz(number){
 			result="Buzz";
 			break;
 		default:
-			result="Nothing";
+			result="";
 	}
 	
 	return result;
