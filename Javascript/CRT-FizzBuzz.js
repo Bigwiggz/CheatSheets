@@ -1,39 +1,56 @@
-/*
-Fizz Buzz is described as follows:
+//Javascript FizzBuzz
 
-Write a short program that displays each number from 1 to 100.
-For each multiple of 3, display "Fizz" instead of the number.
-For each multiple of 5, display "Buzz" instead of the number.
-For numbers which are multiples of both 3 and 5, display "FizzBuzz" instead of the number.
-*/
+//Event Listener
+let runProgramButton=document.getElementById("");
+runProgramButton.addEventListener("click", RunFizzBuzz);
 
-//Start and End Values
-let startValue=1;
-let endValue=100;
-
-//Print out all numbers
-let insertedRowText="";
-
-for(let i=startValue; i<endValue;i++){
-	let fizzBuzzValue=DefineFizzBuzz(i);
-	insertedRowText+=`<tr><td>${i}-${fizzBuzzValue}</td></tr>`;
+//Main Function
+function RunFizzBuzz(){
+	
+	//Start and End Values
+	let startValue=1;
+	let endValue=100;
+	
+	//Print out Fizz Buzz Table
+	PrintOutNumbersToScreen(startValue, endValue);
 }
 
+
+//Print out all numbers to screen
+function PrintOutNumbersToScreen(startValue,endValue){
+	
+	let completeTableText="";
+	
+	//Each Table Row loop
+	for(let y=1; y<=5;y++){
+		
+		let insertedRowText=`<tr>`;
+		//Add each individual value
+		for(let i=startValue; i<endValue;i++){
+			let fizzBuzzValue=DefineFizzBuzz(i);
+			insertedRowText+=`<td class=${fizzBuzzValue}>${fizzBuzzValue}</td>`;
+		}
+		insertedRowText+=`</tr>`;
+		completeTableText+=insertedRowText;
+	}
+
+}
+
+//Function to determine Fizz or Buzz
 function DefineFizzBuzz(number){
 	let result="";
-	
 	switch(number){
 		case number%3===0 && number%5===0:
 			result="FizzBuzz";
 			break;
 		case number%3===0:
-			result="Fizz";
+			result="-Fizz";
 			break;
 		case number%3===0 && number%5===0:
-			result="Buzz";
+			result="-Buzz";
 			break;
 		default:
-			result="";
+			result=number;
 	}
 	
 	return result;
