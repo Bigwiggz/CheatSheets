@@ -20,20 +20,29 @@ function RunFizzBuzz(){
 function PrintOutNumbersToScreen(startValue,endValue){
 	
 	let completeTableText="";
+	let rowCounter=0;
+	let fizzBuzzValue=""
 	
 	//Each Table Row loop
-	for(let y=1; y<=5;y++){
+	let insertedRowText="";
+	
+	//Add each individual value
+	for(let i=startValue; i<endValue;i++){
 		
-		let insertedRowText=`<tr>`;
-		//Add each individual value
-		for(let i=startValue; i<endValue;i++){
-			let fizzBuzzValue=DefineFizzBuzz(i);
-			insertedRowText+=`<td class=${fizzBuzzValue}>${fizzBuzzValue}</td>`;
+		if(rowCounter===0){
+			insertedRowText="<tr>";	
 		}
-		insertedRowText+=`</tr>`;
+		
+		fizzBuzzValue=DefineFizzBuzz(i);
+		insertedRowText+=`<td class=${fizzBuzzValue}>${fizzBuzzValue}</td>`;
+		rowCounter++;
+			
+		if(rowCounter===4){
+			insertedRowText+="</tr>";
+			rowCounter=0;
+		}
 		completeTableText+=insertedRowText;
 	}
-
 }
 
 //Function to determine Fizz or Buzz
@@ -44,10 +53,10 @@ function DefineFizzBuzz(number){
 			result="FizzBuzz";
 			break;
 		case number%3===0:
-			result="-Fizz";
+			result="Fizz";
 			break;
 		case number%3===0 && number%5===0:
-			result="-Buzz";
+			result="Buzz";
 			break;
 		default:
 			result=number;
