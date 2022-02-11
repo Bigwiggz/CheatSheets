@@ -73,3 +73,6 @@ https://github.com/EdwinVW/pitstop
 14) Email in ASP.NET Core Setup\
 https://github.com/markscodingspot/BeautifulMailer
 
+15) Syncfusion Blazor DataGrid with Dapper\
+https://www.syncfusion.com/blogs/post/build-blazor-crud-application-with-dapper.aspx
+
