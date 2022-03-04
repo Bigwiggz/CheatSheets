@@ -76,3 +76,6 @@ https://github.com/markscodingspot/BeautifulMailer
 15) Syncfusion Blazor DataGrid with Dapper\
 https://www.syncfusion.com/blogs/post/build-blazor-crud-application-with-dapper.aspx
 
+16) Add Middleware Exception Handling to an asp.net core MVC app\
+https://www.youtube.com/watch?v=Cy53ENszjWo
+
