@@ -82,6 +82,6 @@ https://www.youtube.com/watch?v=Cy53ENszjWo
 17) Blazor Client API Authentication\
 https://chrissainty.com/securing-your-blazor-apps-authentication-with-clientside-blazor-using-webapi-aspnet-core-identity/
 
-18) C# with Fritz Coding
+18) C# with Fritz Coding\
 https://github.com/csharpfritz/csharp_with_csharpfritz
 
