@@ -83,7 +83,8 @@ https://www.youtube.com/watch?v=Cy53ENszjWo
 https://chrissainty.com/securing-your-blazor-apps-authentication-with-clientside-blazor-using-webapi-aspnet-core-identity/
 
 17a) Blazor WASM Authentication\
-https://www.youtube.com/watch?v=msok26L15iI\
+https://www.youtube.com/watch?v=msok26L15iI
+\
 https://www.youtube.com/watch?v=6dgiIMw6ffU
 
 18) C# with Fritz Coding\
