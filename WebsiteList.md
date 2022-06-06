@@ -90,3 +90,6 @@ https://www.youtube.com/watch?v=6dgiIMw6ffU
 18) C# with Fritz Coding\
 https://github.com/csharpfritz/csharp_with_csharpfritz
 
+19) Using rdlc report builder from c# poco objects\
+https://www.youtube.com/watch?v=8ilSupSWqGQ
+
