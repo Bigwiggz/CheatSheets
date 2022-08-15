@@ -95,4 +95,6 @@ https://www.youtube.com/watch?v=8ilSupSWqGQ
 
 20) Serialize/Save Object\
 https://blog.danskingdom.com/saving-and-loading-a-c-objects-data-to-an-xml-json-or-binary-file/
+\
+https://stackoverflow.com/questions/6115721/how-to-save-restore-serializable-object-to-from-file
 
