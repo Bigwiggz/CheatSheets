@@ -93,3 +93,6 @@ https://github.com/csharpfritz/csharp_with_csharpfritz
 19) Using rdlc report builder from c# poco objects\
 https://www.youtube.com/watch?v=8ilSupSWqGQ
 
+20) Serialize/Save Object\
+https://blog.danskingdom.com/saving-and-loading-a-c-objects-data-to-an-xml-json-or-binary-file/
+
