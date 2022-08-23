@@ -98,3 +98,5 @@ https://blog.danskingdom.com/saving-and-loading-a-c-objects-data-to-an-xml-json-
 \
 https://stackoverflow.com/questions/6115721/how-to-save-restore-serializable-object-to-from-file
 
+21) Generate Blazor Client using Swagger JSON\
+https://elanderson.net/2020/01/using-nswag-to-generate-blazor-server-client-for-an-asp-net-core-3-1-api/
