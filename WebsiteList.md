@@ -100,3 +100,6 @@ https://stackoverflow.com/questions/6115721/how-to-save-restore-serializable-obj
 
 21) Generate Blazor Client using Swagger JSON\
 https://elanderson.net/2020/01/using-nswag-to-generate-blazor-server-client-for-an-asp-net-core-3-1-api/
+
+22) Azure B2C Blazor\
+https://www.youtube.com/watch?v=ecaiqrU_67k
