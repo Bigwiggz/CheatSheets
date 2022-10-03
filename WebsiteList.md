@@ -80,7 +80,7 @@ https://www.syncfusion.com/blogs/post/build-blazor-crud-application-with-dapper.
 https://www.youtube.com/watch?v=Cy53ENszjWo
 
 17) Blazor Client API Authentication\
-https://chrissainty.com/securing-your-blazor-apps-authentication-with-clientside-blazor-using-webapi-aspnet-core-identity/\
+https://chrissainty.com/securing-your-blazor-apps-authentication-with-clientside-blazor-using-webapi-aspnet-core-identity/
 https://github.com/CodeMazeBlog/blazor-series/tree/blazor-wasm-refresh-token/BlazorProducts.Client
 
 17a) Blazor WASM Authentication\
