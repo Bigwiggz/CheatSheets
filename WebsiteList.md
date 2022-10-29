@@ -14,7 +14,11 @@ https://www.puresourcecode.com/dotnet/net-core/integrating-adminlte-with-asp-net
 2a) Bug Tracker Example
 \
 https://www.youtube.com/watch?v=vG824vBdYY8
-
+\
+2b) Blazor WASM AdminLTE Application
+\
+https://www.youtube.com/watch?v=wvAmPI4xn_g
+\
 3) How to create Readme.md files with an online editor\
 https://readme.so/editor
 
